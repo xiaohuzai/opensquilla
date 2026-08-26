@@ -2540,6 +2540,7 @@ const {
   copyMessage,
   regenerateMessage,
   editMessage,
+  cancelEdit,
 } = chatMessageActions
 
 async function handleRegenerateMessage(
@@ -3271,6 +3272,7 @@ const chatComposerShortcuts = useChatComposerShortcuts({
   popPendingTail,
   enqueuePendingInput,
   sendCurrentInput: () => sendCurrentInput(),
+  cancelMessageEdit: () => cancelEdit(),
 })
 const {
   onTextareaBeforeInput,
