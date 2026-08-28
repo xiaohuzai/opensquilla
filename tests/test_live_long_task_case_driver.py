@@ -965,7 +965,7 @@ def test_fault_case_executes_through_isolated_gateway_without_real_provider(
 
 
 @pytest.mark.ci_serial
-def test_fault_429_case_proves_same_deployment_is_not_retried(
+def test_fault_429_case_proves_retry_after_was_not_violated(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     monkeypatch.setenv("DEEPSEEK_API_KEY", "synthetic-not-a-real-key")
